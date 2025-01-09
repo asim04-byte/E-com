@@ -1,0 +1,13 @@
+/* sort-lower-to-higher.css */
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .sort-label {
+    font-weight: bold;
+    color: #555;
+  }
+  

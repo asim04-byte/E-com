@@ -1,0 +1,127 @@
+/* .head {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .cards {
+    margin: 20px;
+    width: calc(25% - 40px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cards img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .Pname {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .rating span {
+    margin-right: 5px;
+  }
+  
+  .Pr_price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .Pr_price span {
+    margin-right: 5px;
+  }
+  
+  .cart_btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cart_btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .cards {
+      width: calc(50% - 40px);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .cards {
+      width: 100%;
+    }
+    .head {
+      margin-bottom: 10px;
+    }
+    .Pname {
+      font-size: 16px;
+    }
+    .cart_btn {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .cards {
+      width: calc(33.33% - 40px);
+    }
+  } */
+
+  /* main.css */
+.product {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.cards {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cart_btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart_btn:hover {
+  background-color: #0056b3;
+}

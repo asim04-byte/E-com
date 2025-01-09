@@ -1,0 +1,21 @@
+/* skeleton.css */
+.skeleton {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .skeleton-image {
+    height: 150px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .skeleton-text {
+    height: 15px;
+    background: #ccc;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
