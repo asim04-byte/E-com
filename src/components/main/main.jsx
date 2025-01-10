@@ -1,41 +1,3 @@
-// import React, { useState, useEffect} from 'react';
-// import './main.css';
-// import productData from '../productdetails';
-// import { FaStar, FaRupeeSign } from 'react-icons/fa';
-
-
-// export const Main=()=>{  
-//   const [productList, setProductList] = useState([]);
- 
-//   useEffect(() => {
-//     const offerProducts = productData.filter(item => item.category === 'men');
-//     console.log(offerProducts)
-//     setProductList(offerProducts);
-//   }, []);
-
-//   return(
-//     <div>
-//     <div className="product">
-//       {productList.map((item,index) => (
-//         <div className='cards' key={index}>
-//           <img src={item.image} alt={item.name} />
-//           <p className='Pname'>{item.name}</p>
-//           <span className='rating'>{item.ratings}<FaStar /><p> Ratings</p></span>
-//           <div className='Pr_price'>
-//             <p><span><FaRupeeSign/></span>{item.offerprice}</p>
-           
-//             <s><span><FaRupeeSign/></span>{item.orginalPrize}</s>
-//           </div>
-//           <div className="cart">
-//             <button className='cart_btn' >Add to cart</button>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   </div>
-//   )
-// }
-
 import React, { useState, useEffect } from 'react';
 import './main.css';
 import productData from '../productdetails';
@@ -49,6 +11,7 @@ const Main = ({ sortOrder }) => {
 
   useEffect(() => {
     const loadProducts = () => {
+      setLoading(true); 
       setTimeout(() => {
         const sortedData = [...productData].sort((a, b) => {
           return sortOrder === 'low-to-high'
@@ -57,7 +20,7 @@ const Main = ({ sortOrder }) => {
         });
         setProductList(sortedData);
         setLoading(false);
-      }, 1500); // Simulate loading time
+      }, 1500);
     };
 
     loadProducts();
